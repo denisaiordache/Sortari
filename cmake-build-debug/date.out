@@ -1,0 +1,44 @@
+Testul1
+
+BubbleSort a sortat in  : 0.510000 sec 
+Vectorul e sortat
+
+InsertionSort a sortat in  : 0.08700 sec 
+Vectorul e sortat
+
+CountSort a sortat in  : 0.00000 sec 
+Vectorul e sortat
+
+RadixSort a sortat in  : 0.00100 sec 
+Vectorul e sortat
+
+QuickSort a sortat in  : 0.00200 sec 
+Vectorul e sortat
+
+MergeSort a sortat in  : 0.00200 sec 
+Vectorul e sortat
+
+Sortarea implicita a sortat in  : 0.00200 sec 
+Vectorul e sortat
+
+Testul2
+
+Sunte prea multe numere pentru a fi sortate cu BubbleSort
+
+Sunte prea multe numere pentru a fi sortate cu InsertionSort
+
+CountSort a sortat in  : 0.00100 sec 
+Vectorul e sortat
+
+RadixSort a sortat in  : 0.00700 sec 
+Vectorul e sortat
+
+QuickSort a sortat in  : 0.02500 sec 
+Vectorul e sortat
+
+MergeSort a sortat in  : 0.01900 sec 
+Vectorul e sortat
+
+Sortarea implicita a sortat in  : 0.02100 sec 
+Vectorul e sortat
+
