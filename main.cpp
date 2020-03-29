@@ -54,20 +54,19 @@ void InsertionSort(int v[],int n)
 }
 void RadixSort(int v[],int nr)
 {
-    int p=0;
+    int p=0,maxim=0,cif=0;
     vector <int> bucket[256];
-    int max1=0,nr_cifre=0;
     for(int i=0;i<nr;i++)
     {
-        if(v[i]>max1)
-            max1=v[i];
+        if(v[i]>maxim)
+            maxim=v[i];
     }
-    while(max1!=0)
+    while(maxim!=0)
     {
-        nr_cifre++;
-        max1 = max1 / 256;
+        cif++;
+        maxim = maxim / 256;
     }
-    for(int k=0;k<nr_cifre;k++)
+    for(int k=0;k<cif;k++)
     {
         for(int i=0;i<nr;i++)
             bucket[(v[i]>>p) % 256].push_back(v[i]);
@@ -82,30 +81,29 @@ void RadixSort(int v[],int nr)
     }
 }
 void interclasare(int v[], int left, int m, int right) {
-    int i, j, k, nl, nr;
-    nl = m-left+1; nr = right-m;
-    int leftv[nl], right_v[nr];
-    for(i = 0; i<nl; i++)
-        leftv[i] = v[left+i];
-    for(j = 0; j<nr; j++)
-        right_v[j] = v[m+1+j];
+    int i, j, k, l=m-left+1, r=right-m;
+    int st[l], dr[r];
+    for(i = 0; i<l; i++)
+        st[i] = v[left+i];
+    for(j = 0; j<r; j++)
+        dr[j] = v[m+1+j];
     i = 0; j = 0; k = left;
-    while(i < nl && j<nr) {
-        if(leftv[i] <= right_v[j]) {
-            v[k] = leftv[i];
+    while(i < l && j<r) {
+        if(st[i] <= dr[j]) {
+            v[k] = st[i];
             i++;
         }else{
-            v[k] = right_v[j];
+            v[k] = dr[j];
             j++;
         }
         k++;
     }
-    while(i<nl) {
-        v[k] = leftv[i];
+    while(i<l) {
+        v[k] = st[i];
         i++; k++;
     }
-    while(j<nr) {
-        v[k] = right_v[j];
+    while(j<r) {
+        v[k] = dr[j];
         j++; k++;
     }
 }
